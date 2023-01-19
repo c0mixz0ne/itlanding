@@ -265,7 +265,13 @@
     <p class="addwork__text">
         Возникли проблемы? <a class="addwork__text-link" href="mailto:email@email.com">Свяжитесь со мной</a>
     </p>
-    <a class="button-link" href="#">Отправить задание</a>
+    <form id="sendfile" action="sendfile.php" method="POST" enctype="multipart/form-data">
+        <label class="button-link button-link_block">
+            <span id="button-link">Прикрепить файл</span>
+            <input class="addwork__file-add" type="file" name="file" required>
+        </label>
+        <input class="button-link button-link_block" type="submit" placeholder="Отправить файл">
+    </form>
 </section>
 <!-- Подвал -->
 <footer id="contact" class="footer">
@@ -299,8 +305,8 @@
                 <div class="footer_link-text">
                     Получайте полезные материалы и узнавайте новости первыми!
                 </div>
-                <form class="footer_link-form" id="subscribe" action="#" method="POST">
-                    <input class="footer__link-email" type="email" value="" name="Email" id="subscribe-email" placeholder="Введите e-mail и нажмите enter" required>
+                <form class="footer_link-form" id="subscribe" action="subscribe.php" method="POST">
+                    <input class="footer__link-email" type="email" value="" name="email" id="subscribe-email" placeholder="Введите e-mail и нажмите enter" required>
                     <label for="subscribe-email" class="footer__link-subscribe-message"></label>
                 </form>
             </div>

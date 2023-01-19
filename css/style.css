@@ -35,6 +35,9 @@
     --main-footerInputText-color:#bababa;
 }
 /* Helpers */
+.addwork__file-add{
+    display: none;
+}
 .preloader{
     position: fixed;
     top: 0;
@@ -374,6 +377,8 @@
     margin-bottom: 30px;
 }
 .button-link{
+    font-family: "Merriweather", serif;
+    border:none;
     text-decoration: none;
     font-size: 15px;
     text-align: center;
@@ -385,6 +390,11 @@
     -o-transition: var(--main-transition);
     transition: var(--main-transition);
     margin-top: auto;
+    cursor: pointer;
+}
+.button-link_block{
+    display: block;
+    margin:10px auto;
 }
 .button-link:hover{
     color:var(--main-white-color);

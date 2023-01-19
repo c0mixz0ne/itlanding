@@ -1,7 +1,9 @@
 window.onload = () => {
     // console.log('allready')
     // Timeout for example
-    setTimeout(() => document.querySelector('.preloader').remove(), 1000)
+    // setTimeout(() => document.querySelector('.preloader').remove(), 1000)
+
+    document.querySelector('.preloader').remove()
 
     //Header action
     window.onscroll = () => {
@@ -45,7 +47,7 @@ window.onload = () => {
 
     //Subscribe
     document.querySelector('#subscribe').addEventListener('submit', e => {
-        e.preventDefault()
+        // e.preventDefault()
         const data = new FormData(e.target)
         document.querySelector('.footer__link-subscribe-message')
         .textContent = `Вы подписались на рассылку, ваша почта ${[...data.entries()][0][1]}`
@@ -55,4 +57,23 @@ window.onload = () => {
         document.querySelector('.header').classList.toggle('open')
         document.querySelector('.header__navigation').style.top = `${document.querySelector('.header').offsetHeight - 1}px`
     })
+
+    //Send file
+    // document.querySelector('.addwork__file-add').onchange = function() {
+    //     document.querySelector('#button-link').textContent = 'Отправить файл';
+    //     document.querySelector('#submit').addEventListener('click', function(){
+    //         document.querySelector('#sendfile').addEventListener('submit', function(e) {
+    //             const data = Object.fromEntries(new FormData(e.target).entries());
+    //             console.log(data);
+    //             debugger;
+    //         })
+    //         document.querySelector('#sendfile').submit()
+    //     })
+    // };
+    document.querySelector("#sendfile").addEventListener("submit", (e) => {
+        const data = Object.fromEntries(new FormData(e.target).entries());
+        console.log(data);
+        // debugger;
+        //debugger for check
+      });
 }
